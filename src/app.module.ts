@@ -32,7 +32,7 @@ import { JwtService } from '@nestjs/jwt';
         password: configService.get<string>('db.postgres.password'),
         database: configService.get<string>('db.postgres.database'),
         autoLoadEntities: true,
-        synchronize: false,
+        synchronize: true,
       }),
       inject: [ConfigService],
     }),
