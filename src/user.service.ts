@@ -83,9 +83,6 @@ export class UserService {
     }
 
     const fileName = `${userId}_${Date.now()}.png`
-    // в тз написано записать на сервер, в докере не работает если записывать на сервер. или в бд надо было как pdf?
-    // если запустить локально и расскоментить строку ниже, все ок 
-    // fs.writeFileSync(path.join(uploadPath, fileName), metadata.buffer)
 
     const user = await this.getUserById(userId)
     user.image = uploadPath + fileName
